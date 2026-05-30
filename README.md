@@ -42,7 +42,7 @@ docker compose down         # 停止并移除
 
 ---
 
-## 本地直接运行（不用 Docker）
+## 直接运行
 
 ```bash
 pip install -r requirements.txt
@@ -65,5 +65,3 @@ Windows PowerShell：`$env:YUN_USERNAME="..."; $env:YUN_PASSWORD="..."; python m
    - `machine_status == available` 视为运行中，跳过；
    - 关机中/开机中等**过渡态**等待，不操作（服务器此时会拒绝操作）；
    - 确认关机（`machine_status=shutdown`）则 POST `action=start_cloud` 开机。
-
-> 经实测：该站点开机操作无需短信验证码。

@@ -1,0 +1,6 @@
+# 凭据/会话/日志/探测产物，勿提交
+.env
+out/
+monitor.log
+__pycache__/
+*.pyc

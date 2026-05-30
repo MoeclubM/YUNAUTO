@@ -1,0 +1,12 @@
+services:
+  yunauto:
+    build: .
+    image: yunauto:latest
+    container_name: yunauto
+    restart: unless-stopped
+    environment:
+      # 账号密码：从同目录 .env 文件读取（见 .env.example）
+      YUN_USERNAME: ${YUN_USERNAME}
+      YUN_PASSWORD: ${YUN_PASSWORD}
+      YUN_INTERVAL: ${YUN_INTERVAL:-60}
+      YUN_COOLDOWN: ${YUN_COOLDOWN:-180}

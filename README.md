@@ -26,19 +26,7 @@ docker compose restart      # 重启
 docker compose down         # 停止并移除
 ```
 
-容器已设 `restart: unless-stopped`，服务器重启后会自动拉起。
-
-### 方式二：不克隆仓库，直接 docker run
-
-```bash
-docker run -d --name yunauto --restart unless-stopped \
-  -e YUN_USERNAME=你的账号 \
-  -e YUN_PASSWORD=你的密码 \
-  ghcr.io/moeclubm/yunauto:latest
-```
-
-> 该镜像由 GitHub Actions 自动构建发布。若首次拉取报无权限，需到 GitHub
-> 仓库 → Packages → `yunauto` → Package settings 里把可见性设为 **Public**。
+容器已设 `restart: unless-stopped`，服务器重启后会自动拉起。镜像在本地构建，无需任何镜像仓库。
 
 ---
 
